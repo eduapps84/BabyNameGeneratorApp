@@ -8,12 +8,12 @@
 import Foundation
 
 protocol BabyNamesServiceProtocol {
-    func fetchBabyList(endpoint: String, completion: @escaping ([Baby], String) -> Void)
+    func fetchBabyList(completion: @escaping ([Baby], String) -> Void)
 }
 
 class BabyNamesService : BabyNamesServiceProtocol {
-    func fetchBabyList(endpoint: String, completion: @escaping ([Baby], String) -> Void) {
-        let url = URL(string: endpoint)!
+    func fetchBabyList(completion: @escaping ([Baby], String) -> Void) {
+        let url = URL(string: ConstantsHelper.endpointAPI)!
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if let error = error {

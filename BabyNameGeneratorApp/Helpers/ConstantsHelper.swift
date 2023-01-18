@@ -1,5 +1,5 @@
 //
-//  NamesListHelper.swift
+//  ConstantsHelper.swift
 //  BabyNameGeneratorApp
 //
 //  Created by Eduardo Maia on 18/01/23.
@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct NamesListHelper {
+struct ConstantsHelper {
+    
+    static let endpointAPI: String = "https://jsonplaceholder.typicode.com/posts"
     
     static let namesList: [[String]] = [
         ["2016", "FEMALE", "ASIAN AND PACIFIC ISLANDER", "Olivia", "172", "1"],

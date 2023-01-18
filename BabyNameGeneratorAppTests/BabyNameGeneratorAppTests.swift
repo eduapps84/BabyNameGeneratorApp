@@ -8,29 +8,51 @@
 import XCTest
 @testable import BabyNameGeneratorApp
 
+final class MockMainProtocol : MainViewModelProtocol {
+    
+    var babyResult: Baby?
+    
+    func setBaby(baby: Baby) {
+        babyResult = baby
+    }
+    
+    func errorSearch() {}
+}
+
 final class BabyNameGeneratorAppTests: XCTestCase {
 
+    var viewModel: MainViewModel!
+    var mockMainProtocol: MockMainProtocol!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.mockMainProtocol = MockMainProtocol()
+        self.viewModel = MainViewModel(withDelegate: mockMainProtocol)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.mockMainProtocol = nil
+        self.viewModel = nil
+    }
+    
+    func testInitBabyListLocal() throws {
+        self.viewModel.fromServer = false
+        self.viewModel.initBabyList()
+        
+        XCTAssert(viewModel.babies.count > 0, "Babies list should not be empty")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testInitBabyListServer() throws {
+        self.viewModel.fromServer = true
+        self.viewModel.initBabyList()
+        
+        XCTAssert(viewModel.babies.count == 0, "Babies list should be empty")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testGetRandomBaby() throws {
+        self.viewModel.fromServer = false
+        self.viewModel.initBabyList()
+        self.viewModel.getRandomBaby(gender: 0)
+        
+        XCTAssertTrue(mockMainProtocol.babyResult != nil, "The result of random baby should not be null")
     }
-
 }

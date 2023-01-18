@@ -19,8 +19,9 @@ class MainViewModel {
     weak private var delegate: MainViewModelProtocol?
     
     private var babyNamesService: BabyNamesServiceProtocol
-    private var babies = [Baby]()
-    private var fromServer: Bool = false
+    
+    var babies = [Baby]()
+    var fromServer: Bool = false
     
     // MARK: Lifecycle
     
@@ -33,7 +34,7 @@ class MainViewModel {
     
     func initBabyList() {
         if fromServer {
-            babyNamesService.fetchBabyList(endpoint: "", completion: { list, error in
+            babyNamesService.fetchBabyList(completion: { list, error in
                 if error.count > 0 {
                     print(error)
                 } else {
@@ -43,7 +44,7 @@ class MainViewModel {
                 }
             })
         } else {
-            for babiesList in NamesListHelper.namesList {
+            for babiesList in ConstantsHelper.namesList {
                 let baby = Baby(yearOfBirth: babiesList[0], gender: babiesList[1], ethnicity: babiesList[2], name: babiesList[3], numberOfBabies: babiesList[4], rank: babiesList[5])
                 babies.append(baby)
             }
