@@ -10,13 +10,16 @@
 		26A66B86EE38F16D18EE4AFE /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67C8B6DE58C0C28BC3A02F5 /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework */; };
 		48E6DB42406EF55B86AECED2 /* Pods_BabyNameGeneratorAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB28AD9A7F43347FCFCC199 /* Pods_BabyNameGeneratorAppTests.framework */; };
 		C1379F23297805340075DB0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F22297805340075DB0E /* AppDelegate.swift */; };
-		C1379F27297805340075DB0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F26297805340075DB0E /* ViewController.swift */; };
+		C1379F27297805340075DB0E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F26297805340075DB0E /* MainViewController.swift */; };
 		C1379F2A297805340075DB0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1379F28297805340075DB0E /* Main.storyboard */; };
 		C1379F2C297805350075DB0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1379F2B297805350075DB0E /* Assets.xcassets */; };
 		C1379F2F297805350075DB0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1379F2D297805350075DB0E /* LaunchScreen.storyboard */; };
 		C1379F3A297805350075DB0E /* BabyNameGeneratorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F39297805350075DB0E /* BabyNameGeneratorAppTests.swift */; };
 		C1379F44297805350075DB0E /* BabyNameGeneratorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */; };
 		C1379F46297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */; };
+		C16096C829781AD0003ED156 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16096C729781AD0003ED156 /* MainViewModel.swift */; };
+		C16096CA29782A33003ED156 /* NamesListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16096C929782A33003ED156 /* NamesListHelper.swift */; };
+		C16096CC29782B5C003ED156 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16096CB29782B5C003ED156 /* Baby.swift */; };
 		C1ABEF352978117800F2C31A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ABEF342978117800F2C31A /* FontHelper.swift */; };
 		C1ABEF392978128000F2C31A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1ABEF382978127200F2C31A /* Roboto-Bold.ttf */; };
 		C1ABEF3A2978128000F2C31A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1ABEF372978127200F2C31A /* Roboto-Regular.ttf */; };
@@ -50,7 +53,7 @@
 		B0C3712D62B563BBD5049344 /* Pods-BabyNameGeneratorAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorAppTests.release.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorAppTests/Pods-BabyNameGeneratorAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C1379F1F297805340075DB0E /* BabyNameGeneratorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNameGeneratorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1379F22297805340075DB0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1379F26297805340075DB0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1379F26297805340075DB0E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C1379F29297805340075DB0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1379F2B297805350075DB0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1379F2E297805350075DB0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +63,9 @@
 		C1379F3F297805350075DB0E /* BabyNameGeneratorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyNameGeneratorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppUITests.swift; sourceTree = "<group>"; };
 		C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C16096C729781AD0003ED156 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C16096C929782A33003ED156 /* NamesListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesListHelper.swift; sourceTree = "<group>"; };
+		C16096CB29782B5C003ED156 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
 		C1ABEF342978117800F2C31A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		C1ABEF372978127200F2C31A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		C1ABEF382978127200F2C31A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -141,8 +147,6 @@
 				C16096C2297819D6003ED156 /* Screens */,
 				C1ABEF362978121C00F2C31A /* Fonts */,
 				C1379F22297805340075DB0E /* AppDelegate.swift */,
-				C1379F26297805340075DB0E /* ViewController.swift */,
-				C1379F28297805340075DB0E /* Main.storyboard */,
 				C1379F2B297805350075DB0E /* Assets.xcassets */,
 				C1379F2D297805350075DB0E /* LaunchScreen.storyboard */,
 				C1379F30297805350075DB0E /* Info.plist */,
@@ -170,6 +174,7 @@
 		C16096C1297819CF003ED156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C16096CB29782B5C003ED156 /* Baby.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		C16096C2297819D6003ED156 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C16096C429781A7D003ED156 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -186,6 +192,32 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C16096C429781A7D003ED156 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C16096C629781A95003ED156 /* ViewModel */,
+				C16096C529781A8A003ED156 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C16096C529781A8A003ED156 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1379F28297805340075DB0E /* Main.storyboard */,
+				C1379F26297805340075DB0E /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C16096C629781A95003ED156 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C16096C729781AD0003ED156 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C1ABEF362978121C00F2C31A /* Fonts */ = {
@@ -202,6 +234,7 @@
 			children = (
 				C1EC6B2029780DAF0036A8B2 /* Observable.swift */,
 				C1ABEF342978117800F2C31A /* FontHelper.swift */,
+				C16096C929782A33003ED156 /* NamesListHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -421,9 +454,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1379F27297805340075DB0E /* ViewController.swift in Sources */,
+				C16096CA29782A33003ED156 /* NamesListHelper.swift in Sources */,
+				C16096C829781AD0003ED156 /* MainViewModel.swift in Sources */,
+				C1379F27297805340075DB0E /* MainViewController.swift in Sources */,
 				C1EC6B2129780DAF0036A8B2 /* Observable.swift in Sources */,
 				C1ABEF352978117800F2C31A /* FontHelper.swift in Sources */,
+				C16096CC29782B5C003ED156 /* Baby.swift in Sources */,
 				C1379F23297805340075DB0E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +641,7 @@
 				DEVELOPMENT_TEAM = Y5ET67EB7L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabyNameGeneratorApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Baby Name";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -634,6 +671,7 @@
 				DEVELOPMENT_TEAM = Y5ET67EB7L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BabyNameGeneratorApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Baby Name";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
