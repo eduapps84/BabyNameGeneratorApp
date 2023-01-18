@@ -18,20 +18,35 @@ class MainViewModel {
     
     weak private var delegate: MainViewModelProtocol?
     
+    private var babyNamesService: BabyNamesServiceProtocol
     private var babies = [Baby]()
+    private var fromServer: Bool = false
     
     // MARK: Lifecycle
     
-    init(withDelegate delegate: MainViewModelProtocol) {
+    init(withDelegate delegate: MainViewModelProtocol, babyNamesService: BabyNamesServiceProtocol = BabyNamesService()) {
         self.delegate = delegate
+        self.babyNamesService = babyNamesService
     }
     
     // MARK: Public functions
     
     func initBabyList() {
-        for babiesList in NamesListHelper.namesList {
-            let baby = Baby(yearOfBirth: babiesList[0], gender: babiesList[1], ethnicity: babiesList[2], name: babiesList[3], numberOfBabies: babiesList[4], rank: babiesList[5])
-            babies.append(baby)
+        if fromServer {
+            babyNamesService.fetchBabyList(endpoint: "", completion: { list, error in
+                if error.count > 0 {
+                    print(error)
+                } else {
+                    for baby in list {
+                        self.babies.append(baby)
+                    }
+                }
+            })
+        } else {
+            for babiesList in NamesListHelper.namesList {
+                let baby = Baby(yearOfBirth: babiesList[0], gender: babiesList[1], ethnicity: babiesList[2], name: babiesList[3], numberOfBabies: babiesList[4], rank: babiesList[5])
+                babies.append(baby)
+            }
         }
     }
     

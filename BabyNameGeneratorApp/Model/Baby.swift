@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Baby {
+struct Baby : Codable {
     var yearOfBirth: String
     var gender: String
     var ethnicity: String
     var name: String
     var numberOfBabies: String
     var rank: String
-    
+
     init(yearOfBirth: String, gender: String, ethnicity: String, name: String, numberOfBabies: String, rank: String) {
         self.yearOfBirth = yearOfBirth
         self.gender = gender
