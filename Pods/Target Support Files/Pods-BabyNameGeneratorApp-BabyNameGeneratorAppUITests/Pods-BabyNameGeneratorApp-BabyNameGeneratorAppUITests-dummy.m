@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests : NSObject
+@end
+@implementation PodsDummy_Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests
+@end

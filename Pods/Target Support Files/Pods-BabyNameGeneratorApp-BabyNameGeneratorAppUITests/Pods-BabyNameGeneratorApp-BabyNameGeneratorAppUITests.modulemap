@@ -1,0 +1,6 @@
+framework module Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests {
+  umbrella header "Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

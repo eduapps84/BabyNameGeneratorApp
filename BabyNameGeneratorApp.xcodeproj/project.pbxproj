@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26A66B86EE38F16D18EE4AFE /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67C8B6DE58C0C28BC3A02F5 /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework */; };
+		48E6DB42406EF55B86AECED2 /* Pods_BabyNameGeneratorAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB28AD9A7F43347FCFCC199 /* Pods_BabyNameGeneratorAppTests.framework */; };
+		C1379F23297805340075DB0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F22297805340075DB0E /* AppDelegate.swift */; };
+		C1379F27297805340075DB0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F26297805340075DB0E /* ViewController.swift */; };
+		C1379F2A297805340075DB0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1379F28297805340075DB0E /* Main.storyboard */; };
+		C1379F2C297805350075DB0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1379F2B297805350075DB0E /* Assets.xcassets */; };
+		C1379F2F297805350075DB0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1379F2D297805350075DB0E /* LaunchScreen.storyboard */; };
+		C1379F3A297805350075DB0E /* BabyNameGeneratorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F39297805350075DB0E /* BabyNameGeneratorAppTests.swift */; };
+		C1379F44297805350075DB0E /* BabyNameGeneratorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */; };
+		C1379F46297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */; };
+		C1ABEF352978117800F2C31A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ABEF342978117800F2C31A /* FontHelper.swift */; };
+		C1ABEF392978128000F2C31A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1ABEF382978127200F2C31A /* Roboto-Bold.ttf */; };
+		C1ABEF3A2978128000F2C31A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1ABEF372978127200F2C31A /* Roboto-Regular.ttf */; };
+		C1EC6B2129780DAF0036A8B2 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EC6B2029780DAF0036A8B2 /* Observable.swift */; };
+		C59EE6E4A6CCC6A521464C92 /* Pods_BabyNameGeneratorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBAAA90ABCED2D6DB50CFA9 /* Pods_BabyNameGeneratorApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1379F36297805350075DB0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1379F17297805340075DB0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1379F1E297805340075DB0E;
+			remoteInfo = BabyNameGeneratorApp;
+		};
+		C1379F40297805350075DB0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1379F17297805340075DB0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1379F1E297805340075DB0E;
+			remoteInfo = BabyNameGeneratorApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B942CFC55D799EDF44C29DD /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AB28AD9A7F43347FCFCC199 /* Pods_BabyNameGeneratorAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyNameGeneratorAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBAAA90ABCED2D6DB50CFA9 /* Pods_BabyNameGeneratorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyNameGeneratorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7BE5E52928F769ED0428F5 /* Pods-BabyNameGeneratorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorApp.debug.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorApp/Pods-BabyNameGeneratorApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AEA8BD3D4B1AA9E45F515915 /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B0C3712D62B563BBD5049344 /* Pods-BabyNameGeneratorAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorAppTests.release.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorAppTests/Pods-BabyNameGeneratorAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C1379F1F297805340075DB0E /* BabyNameGeneratorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNameGeneratorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1379F22297805340075DB0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1379F26297805340075DB0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1379F29297805340075DB0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1379F2B297805350075DB0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1379F2E297805350075DB0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1379F30297805350075DB0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1379F35297805350075DB0E /* BabyNameGeneratorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyNameGeneratorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1379F39297805350075DB0E /* BabyNameGeneratorAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppTests.swift; sourceTree = "<group>"; };
+		C1379F3F297805350075DB0E /* BabyNameGeneratorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyNameGeneratorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppUITests.swift; sourceTree = "<group>"; };
+		C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C1ABEF342978117800F2C31A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		C1ABEF372978127200F2C31A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C1ABEF382978127200F2C31A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		C1EC6B2029780DAF0036A8B2 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		C72E6CAAFE0B2A9E87B1DE59 /* Pods-BabyNameGeneratorAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorAppTests.debug.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorAppTests/Pods-BabyNameGeneratorAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8831501CE0243DC84F0755C /* Pods-BabyNameGeneratorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorApp.release.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorApp/Pods-BabyNameGeneratorApp.release.xcconfig"; sourceTree = "<group>"; };
+		F67C8B6DE58C0C28BC3A02F5 /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1379F1C297805340075DB0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59EE6E4A6CCC6A521464C92 /* Pods_BabyNameGeneratorApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1379F32297805350075DB0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48E6DB42406EF55B86AECED2 /* Pods_BabyNameGeneratorAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1379F3C297805350075DB0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A66B86EE38F16D18EE4AFE /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1345A80F47EF1C08AD23E96F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E7BE5E52928F769ED0428F5 /* Pods-BabyNameGeneratorApp.debug.xcconfig */,
+				E8831501CE0243DC84F0755C /* Pods-BabyNameGeneratorApp.release.xcconfig */,
+				2B942CFC55D799EDF44C29DD /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.debug.xcconfig */,
+				AEA8BD3D4B1AA9E45F515915 /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig */,
+				C72E6CAAFE0B2A9E87B1DE59 /* Pods-BabyNameGeneratorAppTests.debug.xcconfig */,
+				B0C3712D62B563BBD5049344 /* Pods-BabyNameGeneratorAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1379F16297805340075DB0E = {
+			isa = PBXGroup;
+			children = (
+				C1379F21297805340075DB0E /* BabyNameGeneratorApp */,
+				C1379F38297805350075DB0E /* BabyNameGeneratorAppTests */,
+				C1379F42297805350075DB0E /* BabyNameGeneratorAppUITests */,
+				C1379F20297805340075DB0E /* Products */,
+				1345A80F47EF1C08AD23E96F /* Pods */,
+				DB81D1911A8B510A39137F35 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C1379F20297805340075DB0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1379F1F297805340075DB0E /* BabyNameGeneratorApp.app */,
+				C1379F35297805350075DB0E /* BabyNameGeneratorAppTests.xctest */,
+				C1379F3F297805350075DB0E /* BabyNameGeneratorAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1379F21297805340075DB0E /* BabyNameGeneratorApp */ = {
+			isa = PBXGroup;
+			children = (
+				C1EC6B1F29780D610036A8B2 /* Helpers */,
+				C16096C1297819CF003ED156 /* Model */,
+				C16096C3297819F0003ED156 /* Services */,
+				C16096C2297819D6003ED156 /* Screens */,
+				C1ABEF362978121C00F2C31A /* Fonts */,
+				C1379F22297805340075DB0E /* AppDelegate.swift */,
+				C1379F26297805340075DB0E /* ViewController.swift */,
+				C1379F28297805340075DB0E /* Main.storyboard */,
+				C1379F2B297805350075DB0E /* Assets.xcassets */,
+				C1379F2D297805350075DB0E /* LaunchScreen.storyboard */,
+				C1379F30297805350075DB0E /* Info.plist */,
+			);
+			path = BabyNameGeneratorApp;
+			sourceTree = "<group>";
+		};
+		C1379F38297805350075DB0E /* BabyNameGeneratorAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1379F39297805350075DB0E /* BabyNameGeneratorAppTests.swift */,
+			);
+			path = BabyNameGeneratorAppTests;
+			sourceTree = "<group>";
+		};
+		C1379F42297805350075DB0E /* BabyNameGeneratorAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */,
+				C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */,
+			);
+			path = BabyNameGeneratorAppUITests;
+			sourceTree = "<group>";
+		};
+		C16096C1297819CF003ED156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C16096C2297819D6003ED156 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C16096C3297819F0003ED156 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C1ABEF362978121C00F2C31A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C1ABEF382978127200F2C31A /* Roboto-Bold.ttf */,
+				C1ABEF372978127200F2C31A /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C1EC6B1F29780D610036A8B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C1EC6B2029780DAF0036A8B2 /* Observable.swift */,
+				C1ABEF342978117800F2C31A /* FontHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DB81D1911A8B510A39137F35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CBAAA90ABCED2D6DB50CFA9 /* Pods_BabyNameGeneratorApp.framework */,
+				F67C8B6DE58C0C28BC3A02F5 /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework */,
+				3AB28AD9A7F43347FCFCC199 /* Pods_BabyNameGeneratorAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1379F1E297805340075DB0E /* BabyNameGeneratorApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1379F49297805350075DB0E /* Build configuration list for PBXNativeTarget "BabyNameGeneratorApp" */;
+			buildPhases = (
+				F0B1065B4DCE459F0584A72D /* [CP] Check Pods Manifest.lock */,
+				C1379F1B297805340075DB0E /* Sources */,
+				C1379F1C297805340075DB0E /* Frameworks */,
+				C1379F1D297805340075DB0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabyNameGeneratorApp;
+			productName = BabyNameGeneratorApp;
+			productReference = C1379F1F297805340075DB0E /* BabyNameGeneratorApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1379F34297805350075DB0E /* BabyNameGeneratorAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1379F4C297805350075DB0E /* Build configuration list for PBXNativeTarget "BabyNameGeneratorAppTests" */;
+			buildPhases = (
+				4EC74EC0F441ED7966719D08 /* [CP] Check Pods Manifest.lock */,
+				C1379F31297805350075DB0E /* Sources */,
+				C1379F32297805350075DB0E /* Frameworks */,
+				C1379F33297805350075DB0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1379F37297805350075DB0E /* PBXTargetDependency */,
+			);
+			name = BabyNameGeneratorAppTests;
+			productName = BabyNameGeneratorAppTests;
+			productReference = C1379F35297805350075DB0E /* BabyNameGeneratorAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1379F3E297805350075DB0E /* BabyNameGeneratorAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1379F4F297805350075DB0E /* Build configuration list for PBXNativeTarget "BabyNameGeneratorAppUITests" */;
+			buildPhases = (
+				ADC25E78B675DCEC795157B8 /* [CP] Check Pods Manifest.lock */,
+				C1379F3B297805350075DB0E /* Sources */,
+				C1379F3C297805350075DB0E /* Frameworks */,
+				C1379F3D297805350075DB0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1379F41297805350075DB0E /* PBXTargetDependency */,
+			);
+			name = BabyNameGeneratorAppUITests;
+			productName = BabyNameGeneratorAppUITests;
+			productReference = C1379F3F297805350075DB0E /* BabyNameGeneratorAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1379F17297805340075DB0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C1379F1E297805340075DB0E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					C1379F34297805350075DB0E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C1379F1E297805340075DB0E;
+					};
+					C1379F3E297805350075DB0E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C1379F1E297805340075DB0E;
+					};
+				};
+			};
+			buildConfigurationList = C1379F1A297805340075DB0E /* Build configuration list for PBXProject "BabyNameGeneratorApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1379F16297805340075DB0E;
+			productRefGroup = C1379F20297805340075DB0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1379F1E297805340075DB0E /* BabyNameGeneratorApp */,
+				C1379F34297805350075DB0E /* BabyNameGeneratorAppTests */,
+				C1379F3E297805350075DB0E /* BabyNameGeneratorAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1379F1D297805340075DB0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1379F2F297805350075DB0E /* LaunchScreen.storyboard in Resources */,
+				C1379F2C297805350075DB0E /* Assets.xcassets in Resources */,
+				C1ABEF3A2978128000F2C31A /* Roboto-Regular.ttf in Resources */,
+				C1ABEF392978128000F2C31A /* Roboto-Bold.ttf in Resources */,
+				C1379F2A297805340075DB0E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1379F33297805350075DB0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1379F3D297805350075DB0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EC74EC0F441ED7966719D08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyNameGeneratorAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC25E78B675DCEC795157B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0B1065B4DCE459F0584A72D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyNameGeneratorApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1379F1B297805340075DB0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1379F27297805340075DB0E /* ViewController.swift in Sources */,
+				C1EC6B2129780DAF0036A8B2 /* Observable.swift in Sources */,
+				C1ABEF352978117800F2C31A /* FontHelper.swift in Sources */,
+				C1379F23297805340075DB0E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1379F31297805350075DB0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1379F3A297805350075DB0E /* BabyNameGeneratorAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1379F3B297805350075DB0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1379F44297805350075DB0E /* BabyNameGeneratorAppUITests.swift in Sources */,
+				C1379F46297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1379F37297805350075DB0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1379F1E297805340075DB0E /* BabyNameGeneratorApp */;
+			targetProxy = C1379F36297805350075DB0E /* PBXContainerItemProxy */;
+		};
+		C1379F41297805350075DB0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1379F1E297805340075DB0E /* BabyNameGeneratorApp */;
+			targetProxy = C1379F40297805350075DB0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1379F28297805340075DB0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1379F29297805340075DB0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1379F2D297805350075DB0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1379F2E297805350075DB0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1379F47297805350075DB0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1379F48297805350075DB0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1379F4A297805350075DB0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E7BE5E52928F769ED0428F5 /* Pods-BabyNameGeneratorApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5ET67EB7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabyNameGeneratorApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.edu.BabyNameGeneratorApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C1379F4B297805350075DB0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8831501CE0243DC84F0755C /* Pods-BabyNameGeneratorApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5ET67EB7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabyNameGeneratorApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.edu.BabyNameGeneratorApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C1379F4D297805350075DB0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C72E6CAAFE0B2A9E87B1DE59 /* Pods-BabyNameGeneratorAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5ET67EB7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.edu.BabyNameGeneratorAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyNameGeneratorApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BabyNameGeneratorApp";
+			};
+			name = Debug;
+		};
+		C1379F4E297805350075DB0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0C3712D62B563BBD5049344 /* Pods-BabyNameGeneratorAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5ET67EB7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.edu.BabyNameGeneratorAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabyNameGeneratorApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BabyNameGeneratorApp";
+			};
+			name = Release;
+		};
+		C1379F50297805350075DB0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B942CFC55D799EDF44C29DD /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5ET67EB7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.edu.BabyNameGeneratorAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BabyNameGeneratorApp;
+			};
+			name = Debug;
+		};
+		C1379F51297805350075DB0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA8BD3D4B1AA9E45F515915 /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5ET67EB7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.edu.BabyNameGeneratorAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BabyNameGeneratorApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1379F1A297805340075DB0E /* Build configuration list for PBXProject "BabyNameGeneratorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1379F47297805350075DB0E /* Debug */,
+				C1379F48297805350075DB0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1379F49297805350075DB0E /* Build configuration list for PBXNativeTarget "BabyNameGeneratorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1379F4A297805350075DB0E /* Debug */,
+				C1379F4B297805350075DB0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1379F4C297805350075DB0E /* Build configuration list for PBXNativeTarget "BabyNameGeneratorAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1379F4D297805350075DB0E /* Debug */,
+				C1379F4E297805350075DB0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1379F4F297805350075DB0E /* Build configuration list for PBXNativeTarget "BabyNameGeneratorAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1379F50297805350075DB0E /* Debug */,
+				C1379F51297805350075DB0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1379F17297805340075DB0E /* Project object */;
+}
