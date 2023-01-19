@@ -10,12 +10,15 @@ import XCTest
 
 final class MockMainProtocol : MainViewModelProtocol {
     
-    var babyResult: Baby?
+    var error: String?
     
-    func setBaby(baby: Baby) {
-        babyResult = baby
+    func babyListFilled() {}
+    
+    func babyListFilledError(error: String) {
+        self.error = error
     }
     
+    func setBaby() {}
     func errorSearch() {}
 }
 
@@ -42,10 +45,15 @@ final class BabyNameGeneratorAppTests: XCTestCase {
     }
 
     func testInitBabyListServer() throws {
-        self.viewModel.fromServer = true
-        self.viewModel.initBabyList()
+        let babyService = BabyNamesService()
+        let expectation = XCTestExpectation(description: "response")
         
-        XCTAssert(viewModel.babies.count == 0, "Babies list should be empty")
+        babyService.fetchBabyList(completion: { list, error in
+            XCTAssert(error.count > 0, "Babies list should be empty")
+            expectation.fulfill()
+        })
+        
+        wait(for: [expectation], timeout: 2)
     }
     
     func testGetRandomBaby() throws {
@@ -53,6 +61,6 @@ final class BabyNameGeneratorAppTests: XCTestCase {
         self.viewModel.initBabyList()
         self.viewModel.getRandomBaby(gender: 0)
         
-        XCTAssertTrue(mockMainProtocol.babyResult != nil, "The result of random baby should not be null")
+        XCTAssertTrue(viewModel.babyCard != nil, "The result of random baby should not be null")
     }
 }

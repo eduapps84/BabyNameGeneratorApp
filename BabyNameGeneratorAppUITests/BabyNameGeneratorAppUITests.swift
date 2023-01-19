@@ -25,7 +25,6 @@ final class BabyNameGeneratorAppUITests: XCTestCase {
         app.launch()
         
         XCTAssertTrue(app.staticTexts["Choose the gender:"].exists)
-        XCTAssertTrue(app.staticTexts["Name:"].exists)
     }
     
     func testMaleButton() throws {
@@ -36,7 +35,9 @@ final class BabyNameGeneratorAppUITests: XCTestCase {
         XCTAssertTrue(maleButton.exists)
         
         maleButton.tap()
+        
         XCTAssertTrue(!app.staticTexts["baby_info"].label.isEmpty)
+        XCTAssertTrue(app.staticTexts["Name:"].exists)
     }
     
     func testFemaleButton() throws {
@@ -47,6 +48,8 @@ final class BabyNameGeneratorAppUITests: XCTestCase {
         XCTAssertTrue(femaleButton.exists)
         
         femaleButton.tap()
+        
         XCTAssertTrue(!app.staticTexts["baby_info"].label.isEmpty)
+        XCTAssertTrue(app.staticTexts["Name:"].exists)
     }
 }
