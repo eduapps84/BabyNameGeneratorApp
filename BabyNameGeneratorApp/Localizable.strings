@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  BabyNameGeneratorApp
+
+  Created by Eduardo Maia on 19/01/23.
+  
+*/
+
+"choose" = "Choose the gender:";
+"male" = "Male";
+"female" = "Female";
+"name" = "Name";
+"alert_error_msg" = "There was an error trying to fetch the babies list";
+"alert_button" = "Try again";
+"internet_error" = "Internet Error";
+"request_error" = "Request Error";
+"parse_error" = "Parse Error";

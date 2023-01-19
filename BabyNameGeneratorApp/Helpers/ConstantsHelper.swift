@@ -13,7 +13,7 @@ struct ConstantsHelper {
     
     static let namesList: [[String]] = [
         ["2016", "FEMALE", "ASIAN AND PACIFIC ISLANDER", "Olivia", "172", "1"],
-        ["2016", "FEMALE", "ASIAN AND PACIFIC ISLANDER", "Chloe Chloe Chloe Chloe Chloe Chloe Chloe", "112", "2"],
+        ["2016", "FEMALE", "ASIAN AND PACIFIC ISLANDER", "Chloe", "112", "2"],
         ["2016", "FEMALE", "BLACK NON HISPANIC", "Ava", "109", "1"],
         ["2016", "FEMALE", "BLACK NON HISPANIC", "Madison", "104", "2"],
         ["2016", "FEMALE", "HISPANIC", "Isabella", "276", "1"],

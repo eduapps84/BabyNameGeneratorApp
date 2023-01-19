@@ -17,18 +17,18 @@ class BabyNamesService : BabyNamesServiceProtocol {
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if error != nil {
-                completion([], "Internet Error")
+                completion([], NSLocalizedString("internet_error", comment: ""))
             }
             
             if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
-                completion([], "Request Error")
+                completion([], NSLocalizedString("request_error", comment: ""))
             } else {
                 let decoder = JSONDecoder()
 
                 if let data = data, let namesList = try? decoder.decode([Baby].self, from: data) {
                     completion(namesList, "")
                 } else {
-                    completion([], "Parse Error")
+                    completion([], NSLocalizedString("parse_error", comment: ""))
                 }
             }
         }).resume()

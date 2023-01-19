@@ -10,7 +10,7 @@ import Foundation
 protocol MainViewModelProtocol: AnyObject {
     func babyListFilled()
     func babyListFilledError(error: String)
-    func setBaby(baby: Baby)
+    func setBaby()
     func errorSearch()
 }
 
@@ -18,12 +18,19 @@ class MainViewModel {
 
     // MARK: Property
     
+    let chooseTitle = NSLocalizedString("choose", comment: "")
+    let maleTitle = NSLocalizedString("male", comment: "")
+    let femaleTitle = NSLocalizedString("female", comment: "")
+    let alertMsg = NSLocalizedString("alert_error_msg", comment: "")
+    let alertButton = NSLocalizedString("alert_button", comment: "")
+    
     weak private var delegate: MainViewModelProtocol?
     
     private var babyNamesService: BabyNamesServiceProtocol
     
     var babies = [Baby]()
     var fromServer: Bool = false
+    var babyCard: BabyCard?
     
     // MARK: Lifecycle
     
@@ -59,10 +66,12 @@ class MainViewModel {
     
     func getRandomBaby(gender: Int) {
         if !babies.isEmpty {
-            let filterMale = babies.filter { $0.gender.uppercased() == (gender == 0 ? "MALE" : "FEMALE") }
             
-            if let randomBaby = filterMale.randomElement() {
-                self.delegate?.setBaby(baby: randomBaby)
+            let filter = babies.filter { $0.gender.uppercased() == (gender == 0 ? maleTitle.uppercased() : femaleTitle.uppercased()) }
+            
+            if let randomBaby = filter.randomElement() {
+                babyCard = BabyCard(frame: CGRect(), baby: randomBaby)
+                self.delegate?.setBaby()
             } else {
                 self.delegate?.errorSearch()
             }

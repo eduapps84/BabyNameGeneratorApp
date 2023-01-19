@@ -7,24 +7,19 @@
 
 import UIKit
 
-protocol MainViewDelegate: AnyObject {
-    
-}
-
 class MainViewController: UIViewController {
 
     // MARK: IBOutlet
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
-    @IBOutlet weak var babyNameLabel: UILabel!
+    @IBOutlet weak var babiesStack: UIStackView!
     
     // MARK: Property
     
     lazy var viewModel = {
         MainViewModel(withDelegate: self)
     }()
-    
-    weak var mainViewDelegate: MainViewDelegate?
     
     // MARK: Lifecycle
     
@@ -38,6 +33,22 @@ class MainViewController: UIViewController {
     // MARK: Private functions
     
     private func setupUI() {
+        titleLabel.text = viewModel.chooseTitle
+        
+        guard var configMaleButton = maleButton.configuration else {
+            return
+        }
+        
+        guard var configFemaleButton = femaleButton.configuration else {
+            return
+        }
+        
+        configMaleButton.attributedTitle = (try? AttributedString(NSAttributedString(string: viewModel.maleTitle, attributes: [.font: FontHelper.roboto(type: .bold, size: 28)]), including: AttributeScopes.UIKitAttributes.self)) ?? AttributedString()
+        configFemaleButton.attributedTitle = (try? AttributedString(NSAttributedString(string: viewModel.femaleTitle, attributes: [.font: FontHelper.roboto(type: .bold, size: 28)]), including: AttributeScopes.UIKitAttributes.self)) ?? AttributedString()
+        
+        maleButton.configuration = configMaleButton
+        femaleButton.configuration = configFemaleButton
+        
         LayoutHelper.showLoading(view: self.view)
     }
     
@@ -64,9 +75,9 @@ extension MainViewController: MainViewModelProtocol {
     }
     
     func babyListFilledError(error: String) {
-        let alert = UIAlertController(title: error, message: "There was an error trying to fetch the babies list", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: error, message: self.viewModel.alertMsg, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: { action in
+        alert.addAction(UIAlertAction(title: self.viewModel.alertButton, style: UIAlertAction.Style.default, handler: { action in
             self.viewModel.initBabyList()
         }))
         
@@ -75,12 +86,13 @@ extension MainViewController: MainViewModelProtocol {
         })
     }
     
-    func setBaby(baby: Baby) {
-        babyNameLabel.text = baby.name.capitalized
+    func setBaby() {
+        babiesStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        babiesStack.addArrangedSubview(self.viewModel.babyCard!)
     }
     
     func errorSearch() {
-        babyNameLabel.text = ""
+        babiesStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
 }
 

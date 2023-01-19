@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		26A66B86EE38F16D18EE4AFE /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67C8B6DE58C0C28BC3A02F5 /* Pods_BabyNameGeneratorApp_BabyNameGeneratorAppUITests.framework */; };
 		48E6DB42406EF55B86AECED2 /* Pods_BabyNameGeneratorAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB28AD9A7F43347FCFCC199 /* Pods_BabyNameGeneratorAppTests.framework */; };
+		C1006768297954710028D889 /* BabyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1006767297954710028D889 /* BabyCard.xib */; };
+		C100676A297954830028D889 /* BabyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1006769297954830028D889 /* BabyCard.swift */; };
+		C100676C2979569F0028D889 /* BabyCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100676B2979569F0028D889 /* BabyCardViewModel.swift */; };
+		C100676E2979635A0028D889 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C100676D2979635A0028D889 /* Localizable.strings */; };
 		C1379F23297805340075DB0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F22297805340075DB0E /* AppDelegate.swift */; };
 		C1379F27297805340075DB0E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F26297805340075DB0E /* MainViewController.swift */; };
 		C1379F2A297805340075DB0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1379F28297805340075DB0E /* Main.storyboard */; };
@@ -53,6 +57,10 @@
 		7E7BE5E52928F769ED0428F5 /* Pods-BabyNameGeneratorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorApp.debug.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorApp/Pods-BabyNameGeneratorApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA8BD3D4B1AA9E45F515915 /* Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests/Pods-BabyNameGeneratorApp-BabyNameGeneratorAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B0C3712D62B563BBD5049344 /* Pods-BabyNameGeneratorAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyNameGeneratorAppTests.release.xcconfig"; path = "Target Support Files/Pods-BabyNameGeneratorAppTests/Pods-BabyNameGeneratorAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C1006767297954710028D889 /* BabyCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BabyCard.xib; sourceTree = "<group>"; };
+		C1006769297954830028D889 /* BabyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCard.swift; sourceTree = "<group>"; };
+		C100676B2979569F0028D889 /* BabyCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCardViewModel.swift; sourceTree = "<group>"; };
+		C100676D2979635A0028D889 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C1379F1F297805340075DB0E /* BabyNameGeneratorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNameGeneratorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1379F22297805340075DB0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1379F26297805340075DB0E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 				C1379F2B297805350075DB0E /* Assets.xcassets */,
 				C1379F2D297805350075DB0E /* LaunchScreen.storyboard */,
 				C1379F30297805350075DB0E /* Info.plist */,
+				C100676D2979635A0028D889 /* Localizable.strings */,
 			);
 			path = BabyNameGeneratorApp;
 			sourceTree = "<group>";
@@ -188,6 +197,8 @@
 		C13D93952979444B00031A1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1006767297954710028D889 /* BabyCard.xib */,
+				C1006769297954830028D889 /* BabyCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 		C13D93962979445400031A1C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C100676B2979569F0028D889 /* BabyCardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -389,8 +401,10 @@
 				C1379F2F297805350075DB0E /* LaunchScreen.storyboard in Resources */,
 				C1379F2C297805350075DB0E /* Assets.xcassets in Resources */,
 				C1ABEF3A2978128000F2C31A /* Roboto-Regular.ttf in Resources */,
+				C100676E2979635A0028D889 /* Localizable.strings in Resources */,
 				C1ABEF392978128000F2C31A /* Roboto-Bold.ttf in Resources */,
 				C1379F2A297805340075DB0E /* Main.storyboard in Resources */,
+				C1006768297954710028D889 /* BabyCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +505,8 @@
 				C13D9398297944A200031A1C /* LayoutHelper.swift in Sources */,
 				C16096CE297845AE003ED156 /* BabyNamesService.swift in Sources */,
 				C1ABEF352978117800F2C31A /* FontHelper.swift in Sources */,
+				C100676A297954830028D889 /* BabyCard.swift in Sources */,
+				C100676C2979569F0028D889 /* BabyCardViewModel.swift in Sources */,
 				C16096CC29782B5C003ED156 /* Baby.swift in Sources */,
 				C1379F23297805340075DB0E /* AppDelegate.swift in Sources */,
 			);
