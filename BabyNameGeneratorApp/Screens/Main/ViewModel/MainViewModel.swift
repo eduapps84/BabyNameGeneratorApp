@@ -8,6 +8,8 @@
 import Foundation
 
 protocol MainViewModelProtocol: AnyObject {
+    func babyListFilled()
+    func babyListFilledError(error: String)
     func setBaby(baby: Baby)
     func errorSearch()
 }
@@ -36,11 +38,13 @@ class MainViewModel {
         if fromServer {
             babyNamesService.fetchBabyList(completion: { list, error in
                 if error.count > 0 {
-                    print(error)
+                    self.delegate?.babyListFilledError(error: error)
                 } else {
                     for baby in list {
                         self.babies.append(baby)
                     }
+                    
+                    self.delegate?.babyListFilled()
                 }
             })
         } else {
@@ -48,6 +52,8 @@ class MainViewModel {
                 let baby = Baby(yearOfBirth: babiesList[0], gender: babiesList[1], ethnicity: babiesList[2], name: babiesList[3], numberOfBabies: babiesList[4], rank: babiesList[5])
                 babies.append(baby)
             }
+            
+            self.delegate?.babyListFilled()
         }
     }
     

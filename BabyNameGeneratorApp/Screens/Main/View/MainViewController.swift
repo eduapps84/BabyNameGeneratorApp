@@ -31,10 +31,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         setupViewModel()
     }
     
     // MARK: Private functions
+    
+    private func setupUI() {
+        LayoutHelper.showLoading(view: self.view)
+    }
     
     private func setupViewModel() {
         viewModel.initBabyList()
@@ -54,6 +59,22 @@ class MainViewController: UIViewController {
 // MARK: MainViewModelProtocol
 
 extension MainViewController: MainViewModelProtocol {
+    func babyListFilled() {
+        LayoutHelper.hideLoading(view: self.view)
+    }
+    
+    func babyListFilledError(error: String) {
+        let alert = UIAlertController(title: error, message: "There was an error trying to fetch the babies list", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: { action in
+            self.viewModel.initBabyList()
+        }))
+        
+        DispatchQueue.main.async(execute: {
+            self.present(alert, animated: true, completion: nil)
+        })
+    }
+    
     func setBaby(baby: Baby) {
         babyNameLabel.text = baby.name.capitalized
     }

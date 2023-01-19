@@ -17,6 +17,7 @@
 		C1379F3A297805350075DB0E /* BabyNameGeneratorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F39297805350075DB0E /* BabyNameGeneratorAppTests.swift */; };
 		C1379F44297805350075DB0E /* BabyNameGeneratorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */; };
 		C1379F46297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */; };
+		C13D9398297944A200031A1C /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D9397297944A200031A1C /* LayoutHelper.swift */; };
 		C16096C829781AD0003ED156 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16096C729781AD0003ED156 /* MainViewModel.swift */; };
 		C16096CA29782A33003ED156 /* ConstantsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16096C929782A33003ED156 /* ConstantsHelper.swift */; };
 		C16096CC29782B5C003ED156 /* Baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16096CB29782B5C003ED156 /* Baby.swift */; };
@@ -64,6 +65,7 @@
 		C1379F3F297805350075DB0E /* BabyNameGeneratorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyNameGeneratorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1379F43297805350075DB0E /* BabyNameGeneratorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppUITests.swift; sourceTree = "<group>"; };
 		C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyNameGeneratorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C13D9397297944A200031A1C /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		C16096C729781AD0003ED156 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C16096C929782A33003ED156 /* ConstantsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsHelper.swift; sourceTree = "<group>"; };
 		C16096CB29782B5C003ED156 /* Baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baby.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		C1379F21297805340075DB0E /* BabyNameGeneratorApp */ = {
 			isa = PBXGroup;
 			children = (
+				C13D93942979443C00031A1C /* Components */,
 				C1EC6B1F29780D610036A8B2 /* Helpers */,
 				C16096C1297819CF003ED156 /* Model */,
 				C16096C3297819F0003ED156 /* Services */,
@@ -171,6 +174,29 @@
 				C1379F45297805350075DB0E /* BabyNameGeneratorAppUITestsLaunchTests.swift */,
 			);
 			path = BabyNameGeneratorAppUITests;
+			sourceTree = "<group>";
+		};
+		C13D93942979443C00031A1C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C13D93962979445400031A1C /* ViewModel */,
+				C13D93952979444B00031A1C /* View */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C13D93952979444B00031A1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C13D93962979445400031A1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C16096C1297819CF003ED156 /* Model */ = {
@@ -238,6 +264,7 @@
 				C1EC6B2029780DAF0036A8B2 /* Observable.swift */,
 				C1ABEF342978117800F2C31A /* FontHelper.swift */,
 				C16096C929782A33003ED156 /* ConstantsHelper.swift */,
+				C13D9397297944A200031A1C /* LayoutHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -461,6 +488,7 @@
 				C16096C829781AD0003ED156 /* MainViewModel.swift in Sources */,
 				C1379F27297805340075DB0E /* MainViewController.swift in Sources */,
 				C1EC6B2129780DAF0036A8B2 /* Observable.swift in Sources */,
+				C13D9398297944A200031A1C /* LayoutHelper.swift in Sources */,
 				C16096CE297845AE003ED156 /* BabyNamesService.swift in Sources */,
 				C1ABEF352978117800F2C31A /* FontHelper.swift in Sources */,
 				C16096CC29782B5C003ED156 /* Baby.swift in Sources */,
