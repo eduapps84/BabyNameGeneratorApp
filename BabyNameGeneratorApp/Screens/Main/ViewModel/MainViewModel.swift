@@ -66,7 +66,6 @@ class MainViewModel {
     
     func getRandomBaby(gender: Int) {
         if !babies.isEmpty {
-            
             let filter = babies.filter { $0.gender.uppercased() == (gender == 0 ? maleTitle.uppercased() : femaleTitle.uppercased()) }
             
             if let randomBaby = filter.randomElement() {

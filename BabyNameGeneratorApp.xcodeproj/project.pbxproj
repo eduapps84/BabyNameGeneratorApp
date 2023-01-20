@@ -158,10 +158,10 @@
 		C1379F21297805340075DB0E /* BabyNameGeneratorApp */ = {
 			isa = PBXGroup;
 			children = (
-				C13D93942979443C00031A1C /* Components */,
 				C1EC6B1F29780D610036A8B2 /* Helpers */,
 				C16096C1297819CF003ED156 /* Model */,
 				C16096C3297819F0003ED156 /* Services */,
+				C13D93942979443C00031A1C /* Components */,
 				C16096C2297819D6003ED156 /* Screens */,
 				C1ABEF362978121C00F2C31A /* Fonts */,
 				C1379F22297805340075DB0E /* AppDelegate.swift */,
